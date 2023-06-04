@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+html {
+    font-size: 62.5%;
+    @include responsive(1300px) {
+        font-size: 58%;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}

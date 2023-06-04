@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 6.4rem;
+    line-height: 120%;
+    font-weight: 400;
+    color: $title;
+    @include responsive(820px) {
+        font-size: 4rem;
+    }
+    @include responsive(390px) {
+        font-size: 3.2rem;
+    }
+}
+
+h1::selection,
+p::selection,
+.btn-bold::selection,
+h2::selection,
+.active::selection,
+a::selection,
+img::selection,
+span::selection {
+    background-color: $orange;
+    color: $white;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $body;
+    font-weight: 500;
+}
+
+.btn-bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: $white;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: $orange;
+}
+
+a {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.2rem;
+    line-height: 150%;
+    color: $title;
+}
+
+.active {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 150%;
+}

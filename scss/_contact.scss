@@ -1,0 +1,144 @@
+.contato-hero {
+    //background-color: #F0F2F5;
+    padding-top: 9.6rem;
+    min-height: 33.4rem;
+    position: relative;
+    @include flex(row, center, space-between);
+    .container {
+        @include flex(row, center, space-between);
+        position: relative;
+        .introduction {
+            max-width: 69.8rem;
+            h1 {
+                max-width: 43.7rem;
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-size: 3.2rem;
+                line-height: 150%;
+                color: $title;
+            }
+        }
+        .contato-card {
+            max-width: 40.9rem;
+            background-color: $orange;
+            padding: 4rem;
+            position: absolute;
+            bottom: -33.2rem;
+            right: 0;
+            h4 {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 150%;
+                color: $white;
+                margin-bottom: 2.4rem;
+            }
+            p {
+                color: $white;
+            }
+            .whatsapp {
+                margin-top: 6.4rem;
+                .btn-bold {
+                    display: flex;
+                    margin-top: 2.4rem;
+                    span {}
+                    img {
+                        width: 2.4rem;
+                        margin-left: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.maps {
+    // min-height: 36rem;
+    // background-image: url(../assets/maps.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    iframe {
+        width: 100%;
+    }
+}
+
+.form {
+    margin-top: 8rem;
+    margin-bottom: 18rem;
+    display: flex;
+    align-items: start;
+    .container {
+        max-width: 78.6rem;
+        background-color: $box-color;
+        padding: 7.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            max-width: 64.2rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 3.2rem;
+            color: #303133;
+            line-height: 150%;
+            margin-bottom: 5.6rem;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4.2rem;
+            .input-wrapp {
+                label {
+                    display: block;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    line-height: 150%;
+                    color: $body;
+                    margin-bottom: 2.4rem;
+                }
+                input {
+                    width: 30rem;
+                    background-color: transparent;
+                    border-bottom: 1px solid #C6C7D3;
+                    &:focus {
+                        outline: 0;
+                        border-bottom: 1px solid $orange;
+                    }
+                }
+                textarea {
+                    width: 64.2rem;
+                    background-color: transparent;
+                    border-bottom: 1px solid #C6C7D3;
+                    &:focus {
+                        outline: 0;
+                        border-bottom: 1px solid $orange;
+                    }
+                }
+            }
+            .button-wrapp {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                button {
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+                    &:hover {
+                        img {
+                            transform: translateX(10px);
+                        }
+                    }
+                    .btn-bold {
+                        color: $title;
+                        cursor: pointer;
+                    }
+                    img {
+                        margin-left: 0.8rem;
+                        transition: all .4s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
