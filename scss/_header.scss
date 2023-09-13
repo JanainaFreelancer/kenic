@@ -1,0 +1,99 @@
+.menu {
+    width: 100%;
+    position: fixed;
+    background-color: $white;
+    min-height: 9.6rem;
+    z-index: 999;
+    &.active {
+        box-shadow: 0.3rem 0.3rem 3rem #00000017;
+    }
+    @include flex(row, center, space-between);
+    .container {
+        @include flex(row, center, space-between);
+        img {
+            width: 10.6rem;
+            height: auto;
+        }
+        .links {
+            #btn-mobile {
+                display: none;
+            }
+            ul {
+                @include flex(row, center, space-between);
+                list-style: none;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 2.4rem;
+                    }
+                    a {
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                        font-size: 1.8rem;
+                        line-height: 150%;
+                        color: $title;
+                        &.active {
+                            color: $orange;
+                            font-weight: bold;
+                        }
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 0%;
+                            height: 0.2rem;
+                            background-color: transparent;
+                            transition: 0.5s;
+                        }
+                        &:hover::after {
+                            width: 100%;
+                            background-color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    //background-color: #F0F2F5;
+    background-color: #F0F2F5;
+    min-height: 64.2rem;
+    padding-top: 8.1rem;
+    @include flex(row, center, space-between);
+    .container {
+        @include flex(row, center, space-between);
+        position: relative;
+        .introduction {
+            max-width: 69.8rem;
+            p {
+                max-width: 48.3rem;
+                margin-top: 4rem;
+            }
+        }
+        .about-preview {
+            max-width: 40.9rem;
+            background-color: $orange;
+            padding: 6.4rem 4rem;
+            position: absolute;
+            bottom: -23rem;
+            right: 0;
+            p {
+                color: $white;
+            }
+            .btn-bold {
+                display: flex;
+                margin-top: 2.4rem;
+                img {
+                    width: 2.4rem;
+                    margin-left: 0.8rem;
+                    transition: all .5s;
+                }
+                &:hover {
+                    img {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+}

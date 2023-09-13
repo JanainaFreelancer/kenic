@@ -1,0 +1,383 @@
+@include responsive(820px) {
+    header {
+        .menu {
+            .container {
+                .links {
+                    #btn-mobile {
+                        display: flex;
+                        padding: .5rem 1rem;
+                        font-size: 1rem;
+                        background-color: transparent;
+                        cursor: pointer;
+                        gap: .5rem;
+                        #burger {
+                            width: 2.6rem;
+                            border-top: .3rem solid;
+                            display: block;
+                            &::after,
+                            &::before {
+                                content: '';
+                                display: block;
+                                width: 2rem;
+                                height: .2rem;
+                                background-color: currentColor;
+                                margin-top: .5rem;
+                                transition: .3s;
+                                position: relative;
+                            }
+                        }
+                    }
+                    ul {
+                        // display: none;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        width: 100%;
+                        height: 0;
+                        top: 8.9rem;
+                        right: 0;
+                        background-color: $white;
+                        z-index: 9999;
+                        transition: .6s;
+                        visibility: hidden;
+                        overflow-y: hidden;
+                        li {
+                            &:not(:last-child) {
+                                margin-right: 0;
+                            }
+                            padding: 1rem 0;
+                            margin: 0;
+                        }
+                    }
+                    &.active {
+                        #btn-mobile {
+                            #burger {
+                                border-top-color: transparent;
+                                &::before {
+                                    transform: rotate(135deg);
+                                }
+                                &::after {
+                                    transform: rotate(-135deg);
+                                    top: -.6rem;
+                                }
+                            }
+                        }
+                        ul {
+                            // display: block;
+                            height: calc(100vh - 8.9rem);
+                            visibility: visible;
+                            overflow-y: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hero {
+        .container {
+            .introduction {
+                max-width: 41.8rem;
+            }
+        }
+        .about-preview {
+            max-width: 38rem !important;
+            padding: 6.4rem 3.2rem !important;
+            bottom: -24rem !important;
+        }
+    }
+    .area-atuacao {
+        padding-top: 28.7rem;
+        .container {
+            h2 {
+                margin-bottom: 0;
+                text-align: center;
+            }
+            .tab {
+                flex-direction: column;
+                .tab-controls {
+                    ul {
+                        display: flex;
+                        li {
+                            a {
+                                span {
+                                    font-size: 2.4rem;
+                                }
+                                img {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                .tab-conteudo {
+                    margin-top: 5.6rem;
+                }
+            }
+        }
+    }
+    .testemonials-header {
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .testemonials {
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    .testemonials-control {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+    .container-depoimentos {
+        transform: translate(0%, 0%);
+    }
+    .consulta {
+        .consulta-container {
+            padding: 8rem 0;
+            justify-content: center;
+            .consulta-img {
+                display: none;
+            }
+            .consulta-conteudo {
+                max-width: 100%;
+                margin-left: 0;
+                h2 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+                a {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    footer {
+        padding: 4rem 0;
+        .menu {
+            .container {
+                flex-direction: column !important;
+                .logo {
+                    margin-bottom: 4rem;
+                }
+                .links {
+                    ul {
+                        flex-direction: column;
+                        li {
+                            &:not(:last-child) {
+                                margin-right: 0;
+                                margin-bottom: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // PÁGINA SOBRE
+    .hero-sobre {
+        padding: 17.4rem 0 8.4rem 0;
+        .container {
+            flex-wrap: wrap;
+            h1 {
+                max-width: 100%;
+                text-align: center;
+            }
+            p {
+                max-width: 100%;
+                margin-top: 3.2rem;
+                text-align: center;
+            }
+        }
+    }
+    .solution {
+        .content {
+            h2 {
+                max-width: 100%;
+                text-align: center;
+            }
+            p {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .soluction-image {
+        transform: translate(0%, 0%);
+        margin-top: 3.2rem;
+        margin-bottom: 8rem;
+        display: none;
+    }
+    .team-office {
+        margin-bottom: 12rem;
+        min-height: 24rem;
+    }
+    .team {
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        .container {
+            h2 {
+                font-size: 2.4rem;
+                margin-bottom: 3.2rem;
+            }
+            .team-item {
+                flex-direction: row;
+                gap: 1.2rem;
+                .item {
+                    .item-content {
+                        flex-direction: column;
+                        span {
+                            font-size: 1.6rem;
+                        }
+                        ul {
+                            padding-top: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contato-hero {
+        .container {
+            flex-direction: column;
+            .introduction {
+                max-width: 100%;
+                padding-top: 6.4rem;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .contato-card {
+                position: relative;
+                bottom: -4.6rem;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include responsive(390px) {
+    header {
+        .menu {
+            .container {
+                .links {
+                    &.active {
+                        ul {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hero {
+        .container {
+            .introduction {
+                p {
+                    margin-bottom: 6.4rem;
+                }
+            }
+            .about-preview {
+                left: 0;
+                bottom: -40rem !important;
+            }
+        }
+    }
+    .area-atuacao {
+        padding-top: 34.7rem;
+        .container {
+            .tab {
+                .tab-controls {
+                    ul {
+                        li {
+                            a {
+                                span {
+                                    font-size: 1.8rem;
+                                    text-align: center;
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .testemonials {
+        margin-top: 12.4rem;
+        .testemonials-header {
+            h2 {
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .container-depoimentos {
+        justify-content: center;
+        .depoimentos {
+            flex-direction: column;
+            .depoimentos-item {
+                border-bottom: 2px solid $orange;
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+    .consulta {
+        margin-top: 8rem;
+        .consulta-container {
+            .consulta-conteudo {
+                p {
+                    font-size: 2.4rem;
+                    line-height: 130%;
+                    margin: 0 2rem;
+                }
+            }
+        }
+    }
+    .form {
+        margin-bottom: 0;
+        .container {
+            padding: 2.4rem;
+            h2 {
+                font-size: 2.4rem;
+            }
+            form {
+                .input-wrapp {
+                    textarea {
+                        width: 30rem;
+                    }
+                }
+                .button-wrapp {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+    footer{
+        .menu-footer{
+            .container{
+                flex-direction: column;
+                .links{
+                    margin-top: 2.4rem;
+                    ul{
+                        flex-direction: column;
+                        li{
+                            &:not(:last-child){
+                                margin-right: 0;
+                                margin-bottom: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
