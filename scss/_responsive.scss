@@ -342,6 +342,19 @@
             }
         }
     }
+    .team{
+        .container {
+            .team-item {
+                .item {
+                    .item-content {
+                        span{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .form {
         margin-bottom: 0;
         .container {
