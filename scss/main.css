@@ -1060,6 +1060,9 @@ footer .menu-footer .container .links ul li a:hover::after {
     line-height: 130%;
     margin: 0 2rem;
   }
+  .team .container .team-item .item .item-content span {
+    font-size: 1.4rem;
+  }
   .form {
     margin-bottom: 0;
   }
